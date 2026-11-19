@@ -1,0 +1,144 @@
+:root {
+  --text: #1d1d1b;
+  --muted: #4a4a48;
+  --accent: #2b5f8a;
+  --accent-light: #eef3f7;
+  --page: #f4f4f2;
+  --card: #fff;
+  --line: #e2e2de;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--page);
+}
+
+main {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 2rem;
+  background: var(--card);
+  min-height: 100vh;
+}
+
+h1 { font-size: 2.1rem; line-height: 1.2; margin: 0 0 .4rem; }
+h2 { font-size: 1.35rem; margin: 2.4rem 0 .6rem; }
+h3 { font-size: 1.1rem; margin: 1.6rem 0 .4rem; }
+section { scroll-margin-top: 1rem; }
+ul { padding-left: 1.3rem; }
+li { margin-bottom: .3rem; }
+a { color: var(--accent); }
+
+.eyebrow {
+  margin: 0 0 .3rem;
+  font-size: .85rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.subtitle { font-size: 1.3rem; color: var(--muted); margin: 0 0 1.4rem; }
+
+/* Key information box */
+.keyinfo {
+  padding: 1rem 1.2rem;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-light);
+  margin-bottom: 1.4rem;
+}
+.keyinfo dl { margin: 0 0 .6rem; }
+.keyinfo dl > div { display: flex; gap: 1rem; padding: .15rem 0; }
+.keyinfo dt { flex: 0 0 6.5rem; font-weight: 600; }
+.keyinfo dd { margin: 0; }
+.actions { display: flex; flex-wrap: wrap; gap: .6rem; }
+
+.button {
+  display: inline-block;
+  padding: .7rem 1.4rem;
+  background: var(--accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid var(--accent);
+  border-radius: 4px;
+  margin: .4rem 0 1rem;
+}
+.button:hover, .button:focus-visible { background: #1f4767; border-color: #1f4767; }
+.button.secondary { background: transparent; color: var(--accent); }
+.button.secondary:hover, .button.secondary:focus-visible { background: #fff; }
+.actions .button { margin: 0; }
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem 1.2rem;
+  padding: .6rem 0;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 2rem;
+  font-size: .95rem;
+}
+nav a { text-decoration: none; font-weight: 600; }
+nav a:hover { text-decoration: underline; }
+
+.notice {
+  padding: .6rem .9rem;
+  background: #f7f7f5;
+  border: 1px dashed #c9c9c4;
+  border-radius: 4px;
+}
+
+/* Programme tables (used once the programme is ready) */
+table.programme { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+table.programme th, table.programme td {
+  text-align: left;
+  vertical-align: top;
+  padding: .5rem .6rem;
+  border-bottom: 1px solid var(--line);
+}
+table.programme th { width: 4.5rem; font-variant-numeric: tabular-nums; color: var(--muted); }
+table.programme tr.break td, table.programme tr.break th { background: #f7f7f5; font-style: italic; }
+.who { color: var(--muted); font-size: .95rem; }
+
+.contribute {
+  margin-top: 2rem;
+  padding: .2rem 1.2rem .6rem;
+  background: #f7f7f5;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+}
+
+footer {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+  font-size: .9rem;
+  color: #5a5a58;
+}
+footer p { margin: .4rem 0; }
+
+/* Placeholders still to be filled in – delete these spans/classes when done */
+.ph { background: #fff3b0; padding: 0 .2em; border-radius: 2px; }
+.ph-block { background: #fff3b0; padding: .4rem .6rem; border-radius: 2px; }
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  main { padding: 1.5rem 1rem 2rem; }
+  h1 { font-size: 1.65rem; }
+  .subtitle { font-size: 1.1rem; }
+  .keyinfo dl > div { flex-direction: column; gap: 0; padding: .25rem 0; }
+  .keyinfo dt { flex: none; }
+}
+
+@media print {
+  body { background: #fff; }
+  nav, .actions, .button { display: none; }
+  .ph, .ph-block { background: none; }
+}

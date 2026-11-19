@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//SINTEF Digital//Geothermal storage workshop//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:geothermal-storage-workshop-2027@sintefmath.github.io
+DTSTAMP:20261109T120000Z
+DTSTART;VALUE=DATE:20270317
+DTEND;VALUE=DATE:20270319
+SUMMARY:Workshop: Practical Modelling and Simulation of Geothermal Energy Storage
+LOCATION:Oslo\, Norway
+DESCRIPTION:Open workshop – from physical models towards digital twins for real systems. Programme and registration: https://sintefmath.github.io/REPO-NAME/
+URL:https://sintefmath.github.io/REPO-NAME/
+END:VEVENT
+END:VCALENDAR
